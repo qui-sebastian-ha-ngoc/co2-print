@@ -1,0 +1,32 @@
+<header>
+  <div class="header-left">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1>CO₂-Emissions-Dashboard</h1>
+  </div>
+  <nav class="main-nav">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/emissionen">Emissionen</a>
+  </nav>
+</header>
+
+<div class="layout" [ngClass]="{ left: isLtr(), right: !isLtr() }">
+  <aside class="sidebar">
+    <nav>
+      <a href="emissionen">📊 Länderübersicht</a>
+      <a href="emissionen">🏭 Unternehmen</a>
+      <a href="emissionen">🔍 Filteroptionen</a>
+      <a href="emissionen">📎 Quellen</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<footer>
+  <p>
+    © 2025 Non-Profit Organisation | <a href="#">Impressum</a> |
+    <a href="#">Datenschutz</a>
+  </p>
+</footer>
